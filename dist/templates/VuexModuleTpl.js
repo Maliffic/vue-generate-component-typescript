@@ -9,10 +9,11 @@ function _classCallCheck(instance, Constructor) {
     throw new TypeError("Cannot call a class as a function");
   }
 }
-
 /**
  * VuexModuleTpl
  */
+
+
 var VuexModuleTpl =
 /**
  *
@@ -25,4 +26,4 @@ function VuexModuleTpl(name) {
   this.name = name;
 };
 
-exports.default = VuexModuleTpl;
+exports["default"] = VuexModuleTpl;

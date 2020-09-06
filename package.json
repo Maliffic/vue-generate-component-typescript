@@ -11,22 +11,19 @@
   },
   "bundleDependencies": false,
   "dependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-preset-es2015": "^6.24.1",
+    "@babel/core": "^7.9.6",
+    "@babel/preset-env": "^7.9.6",
     "command-line-args": "^2.1.3",
     "del": "^2.2.0",
-    "fs-extra": "^0.26.2",
-    "gulp-babel": "^6.1.3",
-    "gulp": "^3.9.0",
+    "fs-extra": "^9.0.0",
+    "gulp-babel": "^8.0.0",
+    "gulp": "^4.0.2",
     "lodash": "^4.17.11",
     "snyk": "^1.143.0",
     "swig": "^1.4.2"
   },
   "deprecated": false,
   "description": "Vue js component generator for typescript using class components and modules",
-  "devDependencies": {
-    "run-sequence": "^1.2.1"
-  },
   "files": [
     "dist"
   ],
@@ -45,7 +42,7 @@
     "url": "git+https://github.com/Maliffic/vue-generate-component-typescript.git"
   },
   "scripts": {
-    "build": "rm -rf dist && npm run gulp -- build",
+    "build": "rm -rf dist && npm run gulp build",
     "gulp": "gulp",
     "prepublish": "npm run build",
     "snyk-protect": "snyk protect",
