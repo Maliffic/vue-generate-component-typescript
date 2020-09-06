@@ -1,58 +1,59 @@
-# Vue js component generator [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
+# Vue ts class component generator
 
 CLI util for easy generate Vue js component
 
 ## Installation
 
 ```js
-npm install -g vue-generate-component-typescript
+npm install -g @maliffic/vue-class-generator
 ```
 
 ## Usage
 
 ```bash
 vgc --help
+
 ```
 
 ### Create new component
-
 ```bash
 vgc footer
 ```
-
 Will generate five files:
 
 **footer.component.ts**
-
 ```typescript
-import Vue from "vue";
-import Component from "vue-class-component";
+import Vue from 'vue';
+import Component from 'vue-class-component';
 
 @Component({})
 export default class FooterComponent extends Vue {
-  mounted() {
-    console.log("hello from app");
+
+  mounted (){
+    console.log('hello from app');
   }
+  
 }
+
 ```
 
-**footer.component.html**
 
+**footer.component.html**
 ```html
 <div class="footer">
   <h1>footer Component</h1>
 </div>
+
 ```
 
 **footer.component.scss**
-
 ```css
 .footer {
+
 }
 ```
 
 **index.vue**
-
 ```html
 <template src="./footer.component.html"></template>
 <script src="./footer.component.ts" lang="ts"></script>
@@ -60,13 +61,10 @@ export default class FooterComponent extends Vue {
 ```
 
 ### Create new component single file
-
 ```bash
 vgc -s home
 ```
-
 will generate one vue file:
-
 ```javascript
 <template>
   <div class="home">
@@ -84,7 +82,7 @@ export default class HomeComponent extends Vue {
   mounted (){
     console.log('hello from app');
   }
-
+  
 }
 </script>
 
@@ -96,15 +94,12 @@ export default class HomeComponent extends Vue {
 ```
 
 ### Create new directive
-
 ```bash
 vgc -d test
 ```
-
 will generate:
 
 **test.directive.ts**
-
 ```javascript
 import Vue from 'vue';
 
@@ -136,21 +131,14 @@ export const TestDirective
 Vue.directive('test', TestDirective);
 ```
 
+
 ### Create new Pipe (filter)
-
-````bash
-vgc -p test
-```</style>
-````
-
 ```bash
 vgc -p test
 ```
-
 will generate:
 
 **test.pipe.ts**
-
 ```javascript
 import Vue from 'vue';
 
@@ -161,22 +149,6 @@ export const Test = function (value) {
 Vue.filter('test', Test});
 
 ```
-
-will generate:
-
-**test.pipe.ts**
-
-```javascript
-import Vue from 'vue';
-
-export const Test = function (value) {
-    return value;
-};
-
-Vue.filter('test', Test});
-
-```
-
 ### Create new Vuex Module
 
 ```bash
@@ -185,17 +157,14 @@ vgc -m test
 
 will generate:
 
-**test.module.ts**
+## test.module.ts
 
-```javascript
+```typescript
 import { store } from "@/modules/core/store/store";
 import { getModule, Module, VuexModule } from "vuex-module-decorators";
 
 @Module({ dynamic: true, store, name: "Notification" })
-export class TestModule extends VuexModule {
-
-}
+export class TestModule extends VuexModule {}
 
 export const test: TestModule = getModule(TestModule);
-
 ```
