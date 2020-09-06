@@ -6,4 +6,4 @@ export class {{(name.split('/')[name.split('/').length-1]) | pascalCase}}Module 
 
 }
 
-export const {{(name.split('/')[name.split('/').length-1]) | camelCase}}Module: {{(name.split('/')[name.split('/').length-1]) | pascalCase}}Module = getModule({{(name.split('/')[name.split('/').length-1]) | pascalCase}}Module);
+export const {{(name.split('/')[name.split('/').length-1]) | camelCase}}: {{(name.split('/')[name.split('/').length-1]) | pascalCase}}Module = getModule({{(name.split('/')[name.split('/').length-1]) | pascalCase}}Module);
