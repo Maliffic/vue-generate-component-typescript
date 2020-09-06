@@ -1,13 +1,13 @@
 {
   "author": {
-    "name": "Kamar Meddah",
-    "email": "kamar.meddah@gmail.com"
+    "name": "Maliffic",
+    "email": "crucifixx25@gmail.com"
   },
   "bin": {
     "vgc": "dist/vgc.js"
   },
   "bugs": {
-    "url": "https://github.com/Kamar-Meddah/vue-generate-component/issues"
+    "url": "https://github.com/Maliffic/vue-generate-component-typescript"
   },
   "bundleDependencies": false,
   "dependencies": {
@@ -16,21 +16,21 @@
     "command-line-args": "^2.1.3",
     "del": "^2.2.0",
     "fs-extra": "^0.26.2",
-    "gulp": "^4.0.0",
     "gulp-babel": "^6.1.3",
+    "gulp": "^3.9.0",
     "lodash": "^4.17.11",
-    "swig": "^1.4.2",
-    "snyk": "^1.143.0"
+    "snyk": "^1.143.0",
+    "swig": "^1.4.2"
   },
   "deprecated": false,
-  "description": "Vue js component generator",
+  "description": "Vue js component generator for typescript using class components and modules",
   "devDependencies": {
     "run-sequence": "^1.2.1"
   },
   "files": [
     "dist"
   ],
-  "homepage": "https://github.com/Kamar-Meddah/vue-generate-component",
+  "homepage": "https://github.com/Maliffic/vue-generate-component-typescript",
   "keywords": [
     "vue js",
     "vue js component",
@@ -39,10 +39,10 @@
   ],
   "license": "ISC",
   "main": "lib/vgc.js",
-  "name": "vue-generate-component-typescript",
+  "name": "@maliffic/vue-class-generator",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kamar-meddah/vue-generate-component.git"
+    "url": "git+https://github.com/Maliffic/vue-generate-component-typescript.git"
   },
   "scripts": {
     "build": "rm -rf dist && npm run gulp -- build",
